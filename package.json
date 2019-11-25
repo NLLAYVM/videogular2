@@ -46,16 +46,15 @@
     "semantic-release": "15.13.31",
     "systemjs": "^6.1.5",
     "tslint": "5.20.1",
-    "typescript": "~3.7.2",
+    "typescript": "3.7.2",
     "validate-commit-msg": "2.14.0",
     "watch": "1.0.2",
     "zone.js": "0.10.2"
   },
   "scripts": {
     "prebuild": "npm run clean",
-    "build": "ngcc",
+    "build": "ngc",
     "build-ivy": "ngcc",
-    "postbuild": "npm test",
     "build:travis": "ngcc",
     "postbuild:travis": "npm run test",
     "clean": "rimraf -rf ./src/**/*.js && rimraf -rf ./src/**/*.d.ts && rimraf -rf ./compiled",
@@ -71,7 +70,7 @@
     "lint": "tslint -p tsconfig.json -c tslint.json --fix"
   },
   "engines": {
-    "node": ">=10.9.0 <11.0.0"
+    "node": ">=10.9.0 <14.0.0"
   },
   "keywords": [
     "video",
